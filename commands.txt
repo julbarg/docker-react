@@ -1,0 +1,12 @@
+docker build -f Dockerfile.dev .
+
+docker run -it -p 3000:3000 c0b05eecccca
+
+docker run -it -p 3000:3000 -v /app/node_modules -v ${PWD}:/app -e CHOKIDAR_USEPOLLING=true cdc1f5d3e420
+
+docker run -it -p 3000:3000 -v /app/node_modules -v ${PWD}:/app cdc1f5d3e420
+
+cdc1f5d3e420
+
+docker run -it 6057dd31b0de yarn test
+docker run -it 6057dd31b0de npm run test
